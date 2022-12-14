@@ -29,9 +29,9 @@ export class ChessResolver {
 
   @Mutation(() => Chess)
   changeName(@Args('title', { type: () => String }) title: string) {
-    const newChess = { ...mock, title };
+    mock.title = title;
 
-    this.pubSub.publish('titleChanged', { titleChanged: newChess });
-    return newChess;
+    this.pubSub.publish('titleChanged', { titleChanged: mock });
+    return mock;
   }
 }
