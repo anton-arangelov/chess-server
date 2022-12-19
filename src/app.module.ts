@@ -21,7 +21,7 @@ import { ChessModule } from './chess/chess.module';
           'http://localhost:3001',
           'https://chess-omega-seven.vercel.app/',
         ],
-        credentials: false,
+        credentials: true,
       },
     }),
     ChessModule,
