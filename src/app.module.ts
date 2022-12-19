@@ -16,7 +16,13 @@ import { ChessModule } from './chess/chess.module';
       playground: false,
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      cors: false,
+      cors: {
+        origin: [
+          'http://localhost:3000',
+          'https://chess-omega-seven.vercel.app/',
+        ],
+        credentials: false,
+      },
     }),
     ChessModule,
   ],
