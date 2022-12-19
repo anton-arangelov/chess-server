@@ -16,7 +16,7 @@ import { ChessModule } from './chess/chess.module';
       playground: false,
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      cors: true,
+      cors: false,
     }),
     ChessModule,
   ],
