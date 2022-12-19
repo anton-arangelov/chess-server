@@ -20,7 +20,8 @@ import { ChessModule } from './chess/chess.module';
         origin: [
           'http://localhost:3000',
           'http://localhost:3001',
-          'https://chess-omega-seven.vercel.app/',
+          'https://chess-omega-seven.vercel.app',
+          'https://famous-klepon-d7c87d.netlify.app',
         ],
         credentials: true,
       },
