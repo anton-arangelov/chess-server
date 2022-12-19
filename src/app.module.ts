@@ -18,7 +18,7 @@ import { ChessModule } from './chess/chess.module';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       cors: {
         origin: [
-          'http://localhost:3000',
+          'http://localhost:3001',
           'https://chess-omega-seven.vercel.app/',
         ],
         credentials: false,
