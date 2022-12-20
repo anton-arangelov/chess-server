@@ -13,7 +13,12 @@ import { ChessModule } from './chess/chess.module';
       subscriptions: {
         'graphql-ws': true,
       },
-      playground: false,
+      playground: {
+        settings: {
+          'editor.theme': 'light', // use value dark if you want a dark theme in the playground
+          'request.credentials': 'omit',
+        },
+      },
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       typePaths: ['./**/*/graphql'],
