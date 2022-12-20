@@ -16,6 +16,15 @@ import { ChessModule } from './chess/chess.module';
       playground: false,
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      typePaths: ['./**/*.graphql'],
+      installSubscriptionHandlers: true,
+      context: ({ req }) => {
+        return { req };
+      },
+      cors: {
+        credentials: true,
+        origin: true,
+      },
     }),
     ChessModule,
   ],
