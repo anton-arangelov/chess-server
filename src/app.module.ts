@@ -9,14 +9,6 @@ import { ChessModule } from './chess/chess.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
-      cors: {
-        credentials: true,
-        origin: '*',
-      },
-      context: ({ req }) => {
-        return { req };
-      },
-      installSubscriptionHandlers: true,
       driver: ApolloDriver,
       subscriptions: {
         'graphql-ws': true,
@@ -24,6 +16,15 @@ import { ChessModule } from './chess/chess.module';
       playground: false,
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      typePaths: ['./**/*.graphql'],
+      installSubscriptionHandlers: true,
+      context: ({ req }) => {
+        return { req };
+      },
+      cors: {
+        credentials: true,
+        origin: true,
+      },
     }),
     ChessModule,
   ],
