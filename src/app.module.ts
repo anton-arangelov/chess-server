@@ -18,8 +18,7 @@ import { ChessModule } from './chess/chess.module';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       cors: {
         origin: [
-          'http://https://famous-klepon-d7c87d.netlify.app',
-          'http://localhost:3001',
+          'http://famous-klepon-d7c87d.netlify.app',
           'https://chess-omega-seven.vercel.app',
         ],
         credentials: true,
