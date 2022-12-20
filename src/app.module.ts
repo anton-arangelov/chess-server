@@ -18,7 +18,7 @@ import { ChessModule } from './chess/chess.module';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       cors: {
         credentials: true,
-        origin: true,
+        origin: 'http://localhost:3001',
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
         allowedHeaders:
           'Content-Type,Accept,Authorization,Access-Control-Allow-Origin',
