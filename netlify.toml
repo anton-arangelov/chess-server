@@ -1,4 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist/src"
+  functions = "dist/netlify/functions"
+
 [[headers]]
  for = "/*"
  [headers.value]
    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/main"
+  status = 200
