@@ -11,10 +11,7 @@ import { ChessModule } from './chess/chess.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       cors: {
         credentials: true,
-        origin: 'http://localhost:3001',
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-        allowedHeaders:
-          'Content-Type,Accept,Authorization,Access-Control-Allow-Origin',
+        origin: '*',
       },
       context: ({ req }) => {
         return { req };
@@ -26,7 +23,7 @@ import { ChessModule } from './chess/chess.module';
       },
       playground: false,
       autoSchemaFile: true,
-      // plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
     ChessModule,
   ],
