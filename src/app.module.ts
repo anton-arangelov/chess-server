@@ -19,8 +19,8 @@ import { ChessModule } from './chess/chess.module';
       cors: {
         origin: [
           'http://https://famous-klepon-d7c87d.netlify.app',
-          'http://localhost:3001/',
-          'https://chess-omega-seven.vercel.app/',
+          'http://localhost:3001',
+          'https://chess-omega-seven.vercel.app',
         ],
         credentials: true,
       },
