@@ -16,6 +16,10 @@ import { ChessModule } from './chess/chess.module';
       playground: false,
       autoSchemaFile: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      cors: {
+        origin: 'http://localhost:3001',
+        credentials: true,
+      },
     }),
     ChessModule,
   ],
